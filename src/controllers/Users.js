@@ -79,8 +79,8 @@ function verifyToken(req, res, next){
 }
 
 function randomword(){
-    var respuesta = new Array ("Si", "Probablemente si", "Definitivamente no", "De ninguna manera");
-    var aleatorio = Math.floor((Math.random()*4));
+    var respuesta = new Array ("Si", "Probablemente si", "Definitivamente no", "De ninguna manera", "Poul", "Marquito", "Fa", "George", "Fader", "Fireemblem", "Fireemblem2", "Fireemblem3", "Fireemblem4", "Fireemblem5", "Fireemblem6", "Fireemblem7", "Fireemblem8", "Fireemblem10", "Fireemblem11", "Fireemblem12");
+    var aleatorio = Math.floor((Math.random()*20));
     return respuesta[aleatorio];
 }
 module.exports = {
