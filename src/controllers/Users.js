@@ -16,7 +16,8 @@ const controller = {
         else{
             jwt.sign({user}, 'secretkey', (err, token) => {
                 res.status(200).json({
-                    token: token
+                    token: token,
+                    palabra: randomword(),
                 });
             });
         }
@@ -75,6 +76,12 @@ function verifyToken(req, res, next){
     else{
         res.sendStatus(403);
     }
+}
+
+function randomword(){
+    var respuesta = new Array ("Si", "Probablemente si", "Definitivamente no", "De ninguna manera");
+    var aleatorio = Math.floor((Math.random()*4));
+    return respuesta[aleatorio];
 }
 module.exports = {
     controller,
